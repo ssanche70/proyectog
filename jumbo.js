@@ -39,7 +39,7 @@ const isDebug = true;
   const [btnDesplegar] = await page.$x("//*[@id='search-results-page']/div[28]/div/div/div[8]/div[2]/div[2]/div[2]/select");
   await btnDesplegar.click({clickCount: 1, delay: 100});
   await page.waitFor(200);
-  await page.select('select# ', 'Menor precio');
+  await page.select('select# ', 'Menor precio');//no selecciona
   await page.waitFor(200);
   
   //flujoBot();
