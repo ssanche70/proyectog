@@ -35,6 +35,13 @@ const isDebug = true;
   const [textName2] = await page.$x("//*[@id='search-results-page']/div[28]/div/div/div[8]/div[2]");
   var textEstado2 = await Functions.getTextXelement(page, textName2);
   console.log(textEstado2);
+  await page.waitFor(200);
+  const [btnDesplegar] = await page.$x("//*[@id='search-results-page']/div[28]/div/div/div[8]/div[2]/div[2]/div[2]/select");
+  await btnDesplegar.click({clickCount: 1, delay: 100});
+  await page.waitFor(200);
+  await page.select('select# ', 'Menor precio');
+  await page.waitFor(200);
+  
   //flujoBot();
 
   debugger;
