@@ -19,6 +19,7 @@ const isDebug = true;
   const context = await browser.createIncognitoBrowserContext();
   const page = await context.newPage();
   
+  
   await page.goto('https://www.exito.com/');
   await page.type('#downshift-0-input', busqueda);
   await page.keyboard.press("Enter");
